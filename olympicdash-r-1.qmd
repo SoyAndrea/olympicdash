@@ -1,6 +1,11 @@
 ---
 title: "Olympic Games"
-format: html
+format: 
+  dashboard: 
+    orientation: columns
+    logo: images/olympics-logo.svg
+    nav-buttons: [github,linkedin]
+    linkedin: https://www.linkedin.com/in/andreasociologa/
 ---
 
 ```{r}
@@ -28,9 +33,12 @@ olympics <- olympics_full |>
   mutate(medal = fct_relevel(medal, "Bronze", "Silver", "Gold"))
 ```
 
-## Medals by sport
+
+## Column Medals by sport and year
 
 ```{r}
+#| title: Medals by sport
+
 olympics |>
   mutate(
     sport = fct_lump_n(sport, n = 15),
@@ -55,9 +63,11 @@ olympics |>
   )
 ```
 
-## Medals by year
+### Row
 
 ```{r}
+#| title: Medals by year
+
 olympics |>
   count(year, medal) |>
   ggplot(aes(x = year, y = n, color = medal)) +
@@ -79,9 +89,11 @@ olympics |>
   )
 ```
 
-## Medals by country
+
+## Column medals by country
 
 ```{r}
+#| title: Medals by country
 olympics |>
   count(team, medal) |>
   pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>

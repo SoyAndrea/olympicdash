@@ -1,0 +1,312 @@
+---
+title: "Olympic Games"
+format: 
+  dashboard:
+    theme: 
+      - flatly
+      - style/olympicdash.scss
+    orientation: columns
+    logo: images/olympics-logo.svg
+    nav-buttons: [github,linkedin]
+    linkedin: https://www.linkedin.com/in/andreasociologa/
+from: markdown+emoji
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(gt)
+library(plotly)
+```
+
+```{r}
+#| label: load-data
+#| message: false
+olympics_full <- read_csv("data/olympics.csv")
+```
+
+
+# :sunny: Summer Olympics {.tabset}
+
+
+```{r}
+#| label: prep-summer-data
+summer_olympics <- olympics_full |>
+  filter(
+    season == "Summer",
+    !is.na(medal)
+  ) |>
+  separate_wider_delim(cols = team, names = c("team", "suffix"), delim = "-", too_many = "merge", too_few = "align_start") |>
+  select(-suffix) |>
+  mutate(medal = fct_relevel(medal, "Bronze", "Silver", "Gold"))
+```
+
+## Column {width=65%}
+
+### Row {height=65%}
+
+```{r}
+#| title: Medals by sport
+#| fig-width: 8
+#| fig-height: 3
+
+medallas = c("#cd7f32", "#c0c0c0", "#d4af37")
+summer_olympics |>
+  mutate(
+    sport = fct_lump_n(sport, n = 15),
+    sport = fct_infreq(sport),
+    sport = fct_rev(sport),
+    sport = fct_relevel(sport, "Other", after = 0)
+  ) |>
+  ggplot(aes(y = sport, fill = medal)) +
+  geom_bar() +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(
+    x = NULL,
+    y = NULL,
+    fill = "Medal"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = medallas) +
+  theme(
+    legend.position = c(0.9, 0.2),
+    legend.direction = "horizontal",
+    legend.background = element_rect(fill = "white", color = "gray")
+  )
+```
+
+### Row {height=35%}
+
+::: {.card title="Medals by year"}
+`<style> p { overflow: visible; } </style>`{=html}
+Due to WWII, no olympic games were held in 1940 and 1944
+
+```{r}
+#| fig-width: 11
+#| fig-height: 3
+#| fig-asp: 0.2
+summer_olympics |>
+  count(year, medal) |>
+  ggplot(aes(x = year, y = n, color = medal)) +
+  geom_point(size = 1) +
+  geom_line(size = 1) +
+  guides(color = guide_legend(reverse = TRUE)) +
+  scale_x_continuous(breaks = seq(1896, 2020, 8)) +
+  labs(
+    x = "Year",
+    y = NULL,
+    color = "Medal"
+  ) +
+  theme_minimal() +
+  scale_color_manual(values = medallas) +
+  ylim(0,800)+
+  theme(
+    legend.position = c(0.9, 0.2),
+    legend.direction = "horizontal",
+    legend.background = element_rect(fill = "white", color = "gray")
+  )
+```
+::: 
+
+## Column {width=35%}
+
+
+### Row {height="25%"}
+
+
+```{r}
+most_gold = summer_olympics %>% 
+  count(team, medal) %>% 
+  filter(medal== "Gold") %>%
+  arrange(desc(n),team) %>% 
+  slice_head(n=1)
+
+most_silver = summer_olympics %>% 
+  count(team, medal) %>% 
+  filter(medal== "Silver") %>%
+  arrange(desc(n),team) %>% 
+  slice_head(n=1)
+  
+  
+most_bronze = summer_olympics %>% 
+  count(team, medal) %>% 
+  filter(medal== "Bronze") %>%
+  arrange(desc(n),team) %>% 
+  slice_head(n=1)
+  
+```
+
+
+:::{.valuebox icon="award-fill" color="#d4af37"}
+
+Most golds:
+
+`{r} most_gold$n`
+
+`{r} as.character(most_gold$team)`
+
+:::
+
+:::{.valuebox icon="award-fill" color="#bbbbbb"}
+
+Most silvers:
+
+`{r} most_silver$n`
+
+`{r} as.character(most_silver$team)`
+
+:::
+
+
+:::{.valuebox icon="award-fill" color="#d59352"}
+
+Most bronzes:
+
+`{r} most_bronze$n`
+
+`{r} as.character(most_bronze$team)`
+
+:::
+
+
+
+### Row {height="75%" .tabset}
+
+::: {.card title="Top 30 total medals"}
+
+Team sorted in descending order of total medals 
+```{r}
+#| title: Top 30 total medals
+summer_olympics |>
+  count(team, medal) |>
+  pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
+  mutate(Total = Bronze + Gold + Silver) |>
+  relocate(Team = team, Gold, Silver, Bronze, Total) |>
+  arrange(desc(Total), Team) |>
+  slice_head(n = 30) %>% 
+  select(team =  Team, Gold, Silver,Bronze) %>% 
+  gt() %>% 
+  data_color(
+    columns = Gold,
+    rows = Gold > 320,
+    method = "numeric",
+    palette = "inferno"
+  ) %>% 
+  opt_interactive(use_compact_mode = TRUE) %>% 
+  theme_
+
+```
+
+:::
+
+
+::: {.card title="Bottom 30 total medals"}
+```{r}
+#| title: hola
+summer_olympics |>
+  count(team, medal) |>
+  pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
+  mutate(Total = Bronze + Gold + Silver) |>
+  relocate(Team = team, Gold, Silver, Bronze, Total) |>
+  arrange(Total, Team) |>
+  slice_head(n = 30) %>% 
+  select(team =  Team, Gold, Silver,Bronze) %>% 
+  gt() %>% 
+  data_color(
+    method = "numeric",
+    palette = "nord::frost"
+  )
+```
+
+:::
+
+
+
+# :snowflake: Winter Olympics {.tabset}
+
+
+```{r}
+#| label: prep-winter-data
+olympics <- olympics_full |>
+  filter(
+    season == "Winter",
+    !is.na(medal)
+  ) |>
+  separate_wider_delim(cols = team, names = c("team", "suffix"), delim = "-", too_many = "merge", too_few = "align_start") |>
+  select(-suffix) |>
+  mutate(medal = fct_relevel(medal, "Bronze", "Silver", "Gold"))
+```
+
+## Column
+
+### Row {height=60%}
+
+```{r}
+#| title: Medals by sport
+#| fig-width: 10
+olympics |>
+  mutate(
+    sport = fct_lump_n(sport, n = 15),
+    sport = fct_infreq(sport),
+    sport = fct_rev(sport),
+    sport = fct_relevel(sport, "Other", after = 0)
+  ) |>
+  ggplot(aes(y = sport, fill = medal)) +
+  geom_bar() +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(
+    x = NULL,
+    y = NULL,
+    fill = "Medal"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.2),
+    legend.direction = "horizontal",
+    legend.background = element_rect(fill = "white", color = "gray")
+  )
+```
+
+### Row {height=40%}
+
+```{r}
+#| title: Medals by year
+#| fig-asp: 0.3
+#| fig-width: 10
+olympics |>
+  count(year, medal) |>
+  ggplot(aes(x = year, y = n, color = medal)) +
+  geom_point(size = 0.5) +
+  geom_line() +
+  guides(color = guide_legend(reverse = TRUE)) +
+  scale_x_continuous(breaks = seq(1896, 2020, 8)) +
+  labs(
+    x = "Year",
+    y = NULL,
+    color = "Medal"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.2),
+    legend.direction = "horizontal",
+    legend.background = element_rect(fill = "white", color = "gray")
+  )
+```
+
+## Column
+
+```{r}
+#| title: Medals by country
+
+olympics |>
+  count(team, medal) |>
+  pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
+  mutate(Total = Bronze + Gold + Silver) |>
+  relocate(Team = team, Gold, Silver, Bronze, Total) |>
+  arrange(desc(Total), Team) |>
+  gt()
+```
+
+
+
