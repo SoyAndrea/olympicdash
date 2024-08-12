@@ -193,8 +193,7 @@ summer_olympics |>
     method = "numeric",
     palette = "inferno"
   ) %>% 
-  opt_interactive(use_compact_mode = TRUE) %>% 
-  theme_
+  opt_interactive(use_compact_mode = TRUE)
 
 ```
 
