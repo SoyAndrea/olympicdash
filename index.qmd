@@ -17,6 +17,7 @@ from: markdown+emoji
 #| message: false
 library(tidyverse)
 library(gt)
+library(gtExtras)
 library(plotly)
 ```
 
@@ -79,33 +80,49 @@ summer_olympics |>
 ### Row {height=35%}
 
 ::: {.card title="Medals by year"}
-`<style> p { overflow: visible; } </style>`{=html}
+
 Due to WWII, no olympic games were held in 1940 and 1944
 
 ```{r}
-#| fig-width: 11
-#| fig-height: 3
-#| fig-asp: 0.2
-summer_olympics |>
+#| fig-width: 13
+#| fig-height: 2
+
+  summer_olympics |>
   count(year, medal) |>
-  ggplot(aes(x = year, y = n, color = medal)) +
-  geom_point(size = 1) +
-  geom_line(size = 1) +
-  guides(color = guide_legend(reverse = TRUE)) +
+  ggplot(aes(x = year, y = n, fill = medal)) +
+  geom_line(aes(color = medal), linewidth = 0.8) +
+  geom_point(size = 2, color = "white", shape = "circle filled") +
+  guides(
+    color = guide_legend(reverse = TRUE),
+    fill = guide_legend(reverse = TRUE)
+  ) +
+  scale_color_manual(values = c(
+    "Gold" = "#d4af37",
+    "Silver" = "#c0c0c0",
+    "Bronze" = "#cd7f32"
+    )
+  ) +
+  scale_fill_manual(values = c(
+    "Gold" = "#d4af37",
+    "Silver" = "#c0c0c0",
+    "Bronze" = "#cd7f32"
+    )
+  ) +  
   scale_x_continuous(breaks = seq(1896, 2020, 8)) +
   labs(
     x = "Year",
     y = NULL,
-    color = "Medal"
+    color = "Medal",
+    fill = "Medal"
   ) +
   theme_minimal() +
-  scale_color_manual(values = medallas) +
-  ylim(0,800)+
   theme(
-    legend.position = c(0.9, 0.2),
+    legend.position = "inside",
+    legend.position.inside = c(0.8, 0.2),
     legend.direction = "horizontal",
     legend.background = element_rect(fill = "white", color = "gray")
   )
+
 ```
 ::: 
 
@@ -188,12 +205,10 @@ summer_olympics |>
   select(team =  Team, Gold, Silver,Bronze) %>% 
   gt() %>% 
   data_color(
-    columns = Gold,
-    rows = Gold > 320,
     method = "numeric",
-    palette = "inferno"
-  ) %>% 
-  opt_interactive(use_compact_mode = TRUE)
+    palette = c("#0d3b66","#faf0ca","#f4d35e")
+  ) %>%
+  gt_theme_538()
 
 ```
 
@@ -211,11 +226,13 @@ summer_olympics |>
   arrange(Total, Team) |>
   slice_head(n = 30) %>% 
   select(team =  Team, Gold, Silver,Bronze) %>% 
-  gt() %>% 
+  gt() %>%
   data_color(
     method = "numeric",
-    palette = "nord::frost"
-  )
+    palette =  c("#edf6f9","#83c5be")
+  ) %>%
+  gt_theme_538()
+
 ```
 
 :::
