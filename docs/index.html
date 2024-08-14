@@ -41,6 +41,24 @@ ul.task-list li input[type="checkbox"] {
 <script src="index_files/libs/quarto-dashboard/web-components.js" type="module"></script>
 <script src="index_files/libs/quarto-dashboard/components.js"></script>
 <link href="index_files/libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
+<link href="index_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="index_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="index_files/libs/plotly-binding-4.10.4/plotly.js"></script>
+
+<script src="index_files/libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="index_files/libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="index_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="index_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="index_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="index_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
 
 
 </head>
@@ -71,9 +89,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div id="summer-olympics" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-summer-olympics">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 65fr) minmax(3em, 35fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 60fr) minmax(3em, 35fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 65fr) minmax(3em, 35fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 55fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-title="Medals by sport" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
@@ -92,14 +110,12 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="card html-fill-item html-fill-container bslib-card" data-title="Medals by year" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title">Medals by year</div></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Medal by year" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title">Medal by year</div></div>
 <div class="card-body html-fill-item html-fill-container">
-<p>Due to WWII, no olympic games were held in 1940 and 1944</p>
-</div>
-<div class="cell card-body html-fill-item html-fill-container">
 <div class="cell-output-display html-fill-item html-fill-container">
-<img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-dashboard-img-contain">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-6a0a14de3aa952c10221" style="width:100%;height:325px;"></div>
+<script type="application/json" data-for="htmlwidget-6a0a14de3aa952c10221">{"x":{"visdat":{"489441e55181":["function () ","plotlyVisDat"]},"cur_data":"489441e55181","attrs":{"489441e55181":{"x":{},"y":{},"mode":"lines+markers","marker":{"size":8,"symbol":"circle","color":"white"},"color":{},"colors":["#d4af37","#c0c0c0","#cd7f32"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":50,"l":50,"t":50,"r":50},"xaxis":{"domain":[0,1],"automargin":true,"title":"Year","tickvals":[1896,1904,1912,1920,1928,1936,1944,1952,1960,1968,1976,1984,1992,2000,2008,2016]},"yaxis":{"domain":[0,1],"automargin":true,"title":"","range":[0,800]},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1896,1900,1904,1906,1908,1912,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[38,175,150,145,256,300,367,274,250,204,295,279,300,298,308,343,358,419,448,469,502,549,604,629,680,677,710,679,703],"mode":"lines+markers","marker":{"color":"white","size":8,"symbol":"circle","line":{"color":"rgba(205,127,50,1)"}},"type":"scatter","name":"Bronze","textfont":{"color":"rgba(205,127,50,1)"},"error_y":{"color":"rgba(205,127,50,1)"},"error_x":{"color":"rgba(205,127,50,1)"},"line":{"color":"rgba(205,127,50,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1896,1900,1904,1906,1908,1912,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[43,228,163,156,281,315,448,281,239,214,310,284,291,293,294,339,340,392,434,458,477,513,549,605,661,660,667,630,655],"mode":"lines+markers","marker":{"color":"white","size":8,"symbol":"circle","line":{"color":"rgba(192,192,192,1)"}},"type":"scatter","name":"Silver","textfont":{"color":"rgba(192,192,192,1)"},"error_y":{"color":"rgba(192,192,192,1)"},"error_x":{"color":"rgba(192,192,192,1)"},"line":{"color":"rgba(192,192,192,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1896,1900,1904,1906,1908,1912,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[62,201,173,157,294,326,493,277,245,229,312,289,306,302,309,347,359,404,438,457,497,520,559,608,663,664,671,632,665],"mode":"lines+markers","marker":{"color":"white","size":8,"symbol":"circle","line":{"color":"rgba(212,175,55,1)"}},"type":"scatter","name":"Gold","textfont":{"color":"rgba(212,175,55,1)"},"error_y":{"color":"rgba(212,175,55,1)"},"error_x":{"color":"rgba(212,175,55,1)"},"line":{"color":"rgba(212,175,55,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
@@ -174,27 +190,27 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-6"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-6-1"><div class="card-body html-fill-item html-fill-container" data-title="Top 30 total medals">
 <p>Team sorted in descending order of total medals</p>
 <div class="cell-output-display html-fill-item html-fill-container">
-<div id="nhrqeddsry" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<div id="tyobacmmwp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#nhrqeddsry table {
+#tyobacmmwp table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nhrqeddsry thead, #nhrqeddsry tbody, #nhrqeddsry tfoot, #nhrqeddsry tr, #nhrqeddsry td, #nhrqeddsry th {
+#tyobacmmwp thead, #tyobacmmwp tbody, #tyobacmmwp tfoot, #tyobacmmwp tr, #tyobacmmwp td, #tyobacmmwp th {
   border-style: none;
 }
 
-#nhrqeddsry p {
+#tyobacmmwp p {
   margin: 0;
   padding: 0;
 }
 
-#nhrqeddsry .gt_table {
+#tyobacmmwp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -220,12 +236,12 @@ grid-auto-rows: minmax(0, 1fr);">
   border-left-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_caption {
+#tyobacmmwp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nhrqeddsry .gt_title {
+#tyobacmmwp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -237,7 +253,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-width: 0;
 }
 
-#nhrqeddsry .gt_subtitle {
+#tyobacmmwp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -249,7 +265,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-width: 0;
 }
 
-#nhrqeddsry .gt_heading {
+#tyobacmmwp .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -261,13 +277,13 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_bottom_border {
+#tyobacmmwp .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_col_headings {
+#tyobacmmwp .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -282,7 +298,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_col_heading {
+#tyobacmmwp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -302,7 +318,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#nhrqeddsry .gt_column_spanner_outer {
+#tyobacmmwp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -314,15 +330,15 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 4px;
 }
 
-#nhrqeddsry .gt_column_spanner_outer:first-child {
+#tyobacmmwp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nhrqeddsry .gt_column_spanner_outer:last-child {
+#tyobacmmwp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nhrqeddsry .gt_column_spanner {
+#tyobacmmwp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -334,11 +350,11 @@ grid-auto-rows: minmax(0, 1fr);">
   width: 100%;
 }
 
-#nhrqeddsry .gt_spanner_row {
+#tyobacmmwp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nhrqeddsry .gt_group_heading {
+#tyobacmmwp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -364,7 +380,7 @@ grid-auto-rows: minmax(0, 1fr);">
   text-align: left;
 }
 
-#nhrqeddsry .gt_empty_group_heading {
+#tyobacmmwp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -379,15 +395,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: middle;
 }
 
-#nhrqeddsry .gt_from_md > :first-child {
+#tyobacmmwp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nhrqeddsry .gt_from_md > :last-child {
+#tyobacmmwp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nhrqeddsry .gt_row {
+#tyobacmmwp .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -406,7 +422,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#nhrqeddsry .gt_stub {
+#tyobacmmwp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -419,7 +435,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#nhrqeddsry .gt_stub_row_group {
+#tyobacmmwp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -433,15 +449,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: top;
 }
 
-#nhrqeddsry .gt_row_group_first td {
+#tyobacmmwp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nhrqeddsry .gt_row_group_first th {
+#tyobacmmwp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nhrqeddsry .gt_summary_row {
+#tyobacmmwp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -451,16 +467,16 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#nhrqeddsry .gt_first_summary_row {
+#tyobacmmwp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_first_summary_row.thick {
+#tyobacmmwp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nhrqeddsry .gt_last_summary_row {
+#tyobacmmwp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -470,7 +486,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_grand_summary_row {
+#tyobacmmwp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -480,7 +496,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#nhrqeddsry .gt_first_grand_summary_row {
+#tyobacmmwp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -490,7 +506,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_last_grand_summary_row_top {
+#tyobacmmwp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -500,11 +516,11 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_striped {
+#tyobacmmwp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nhrqeddsry .gt_table_body {
+#tyobacmmwp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -513,7 +529,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_footnotes {
+#tyobacmmwp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -527,7 +543,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_footnote {
+#tyobacmmwp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -536,7 +552,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#nhrqeddsry .gt_sourcenotes {
+#tyobacmmwp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -550,7 +566,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#nhrqeddsry .gt_sourcenote {
+#tyobacmmwp .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -558,72 +574,72 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#nhrqeddsry .gt_left {
+#tyobacmmwp .gt_left {
   text-align: left;
 }
 
-#nhrqeddsry .gt_center {
+#tyobacmmwp .gt_center {
   text-align: center;
 }
 
-#nhrqeddsry .gt_right {
+#tyobacmmwp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nhrqeddsry .gt_font_normal {
+#tyobacmmwp .gt_font_normal {
   font-weight: normal;
 }
 
-#nhrqeddsry .gt_font_bold {
+#tyobacmmwp .gt_font_bold {
   font-weight: bold;
 }
 
-#nhrqeddsry .gt_font_italic {
+#tyobacmmwp .gt_font_italic {
   font-style: italic;
 }
 
-#nhrqeddsry .gt_super {
+#tyobacmmwp .gt_super {
   font-size: 65%;
 }
 
-#nhrqeddsry .gt_footnote_marks {
+#tyobacmmwp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nhrqeddsry .gt_asterisk {
+#tyobacmmwp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nhrqeddsry .gt_indent_1 {
+#tyobacmmwp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nhrqeddsry .gt_indent_2 {
+#tyobacmmwp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nhrqeddsry .gt_indent_3 {
+#tyobacmmwp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nhrqeddsry .gt_indent_4 {
+#tyobacmmwp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nhrqeddsry .gt_indent_5 {
+#tyobacmmwp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#nhrqeddsry .katex-display {
+#tyobacmmwp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#nhrqeddsry div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tyobacmmwp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 
@@ -829,27 +845,27 @@ tbody tr:last-child {
 </div>
 </div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-6-2"><div class="card-body html-fill-item html-fill-container" data-title="Bottom 30 total medals">
 <div class="cell-output-display html-fill-item html-fill-container">
-<div id="qtqwrlqoeg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<div id="clecjixrww" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
 <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#qtqwrlqoeg table {
+#clecjixrww table {
   font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qtqwrlqoeg thead, #qtqwrlqoeg tbody, #qtqwrlqoeg tfoot, #qtqwrlqoeg tr, #qtqwrlqoeg td, #qtqwrlqoeg th {
+#clecjixrww thead, #clecjixrww tbody, #clecjixrww tfoot, #clecjixrww tr, #clecjixrww td, #clecjixrww th {
   border-style: none;
 }
 
-#qtqwrlqoeg p {
+#clecjixrww p {
   margin: 0;
   padding: 0;
 }
 
-#qtqwrlqoeg .gt_table {
+#clecjixrww .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -875,12 +891,12 @@ tbody tr:last-child {
   border-left-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_caption {
+#clecjixrww .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qtqwrlqoeg .gt_title {
+#clecjixrww .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -892,7 +908,7 @@ tbody tr:last-child {
   border-bottom-width: 0;
 }
 
-#qtqwrlqoeg .gt_subtitle {
+#clecjixrww .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -904,7 +920,7 @@ tbody tr:last-child {
   border-top-width: 0;
 }
 
-#qtqwrlqoeg .gt_heading {
+#clecjixrww .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -916,13 +932,13 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_bottom_border {
+#clecjixrww .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_col_headings {
+#clecjixrww .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -937,7 +953,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_col_heading {
+#clecjixrww .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -957,7 +973,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#qtqwrlqoeg .gt_column_spanner_outer {
+#clecjixrww .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -969,15 +985,15 @@ tbody tr:last-child {
   padding-right: 4px;
 }
 
-#qtqwrlqoeg .gt_column_spanner_outer:first-child {
+#clecjixrww .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qtqwrlqoeg .gt_column_spanner_outer:last-child {
+#clecjixrww .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qtqwrlqoeg .gt_column_spanner {
+#clecjixrww .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000000;
@@ -989,11 +1005,11 @@ tbody tr:last-child {
   width: 100%;
 }
 
-#qtqwrlqoeg .gt_spanner_row {
+#clecjixrww .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qtqwrlqoeg .gt_group_heading {
+#clecjixrww .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1019,7 +1035,7 @@ tbody tr:last-child {
   text-align: left;
 }
 
-#qtqwrlqoeg .gt_empty_group_heading {
+#clecjixrww .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1034,15 +1050,15 @@ tbody tr:last-child {
   vertical-align: middle;
 }
 
-#qtqwrlqoeg .gt_from_md > :first-child {
+#clecjixrww .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qtqwrlqoeg .gt_from_md > :last-child {
+#clecjixrww .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qtqwrlqoeg .gt_row {
+#clecjixrww .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -1061,7 +1077,7 @@ tbody tr:last-child {
   overflow-x: hidden;
 }
 
-#qtqwrlqoeg .gt_stub {
+#clecjixrww .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1074,7 +1090,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtqwrlqoeg .gt_stub_row_group {
+#clecjixrww .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1088,15 +1104,15 @@ tbody tr:last-child {
   vertical-align: top;
 }
 
-#qtqwrlqoeg .gt_row_group_first td {
+#clecjixrww .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qtqwrlqoeg .gt_row_group_first th {
+#clecjixrww .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qtqwrlqoeg .gt_summary_row {
+#clecjixrww .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1106,16 +1122,16 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtqwrlqoeg .gt_first_summary_row {
+#clecjixrww .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_first_summary_row.thick {
+#clecjixrww .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qtqwrlqoeg .gt_last_summary_row {
+#clecjixrww .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1125,7 +1141,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_grand_summary_row {
+#clecjixrww .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1135,7 +1151,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtqwrlqoeg .gt_first_grand_summary_row {
+#clecjixrww .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1145,7 +1161,7 @@ tbody tr:last-child {
   border-top-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_last_grand_summary_row_top {
+#clecjixrww .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1155,11 +1171,11 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_striped {
+#clecjixrww .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qtqwrlqoeg .gt_table_body {
+#clecjixrww .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1168,7 +1184,7 @@ tbody tr:last-child {
   border-bottom-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_footnotes {
+#clecjixrww .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1182,7 +1198,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_footnote {
+#clecjixrww .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1191,7 +1207,7 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtqwrlqoeg .gt_sourcenotes {
+#clecjixrww .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1205,7 +1221,7 @@ tbody tr:last-child {
   border-right-color: #D3D3D3;
 }
 
-#qtqwrlqoeg .gt_sourcenote {
+#clecjixrww .gt_sourcenote {
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1213,72 +1229,72 @@ tbody tr:last-child {
   padding-right: 5px;
 }
 
-#qtqwrlqoeg .gt_left {
+#clecjixrww .gt_left {
   text-align: left;
 }
 
-#qtqwrlqoeg .gt_center {
+#clecjixrww .gt_center {
   text-align: center;
 }
 
-#qtqwrlqoeg .gt_right {
+#clecjixrww .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qtqwrlqoeg .gt_font_normal {
+#clecjixrww .gt_font_normal {
   font-weight: normal;
 }
 
-#qtqwrlqoeg .gt_font_bold {
+#clecjixrww .gt_font_bold {
   font-weight: bold;
 }
 
-#qtqwrlqoeg .gt_font_italic {
+#clecjixrww .gt_font_italic {
   font-style: italic;
 }
 
-#qtqwrlqoeg .gt_super {
+#clecjixrww .gt_super {
   font-size: 65%;
 }
 
-#qtqwrlqoeg .gt_footnote_marks {
+#clecjixrww .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qtqwrlqoeg .gt_asterisk {
+#clecjixrww .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qtqwrlqoeg .gt_indent_1 {
+#clecjixrww .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qtqwrlqoeg .gt_indent_2 {
+#clecjixrww .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qtqwrlqoeg .gt_indent_3 {
+#clecjixrww .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qtqwrlqoeg .gt_indent_4 {
+#clecjixrww .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qtqwrlqoeg .gt_indent_5 {
+#clecjixrww .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qtqwrlqoeg .katex-display {
+#clecjixrww .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qtqwrlqoeg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#clecjixrww div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 
@@ -1491,9 +1507,9 @@ tbody tr:last-child {
 </div>
 </div>
 </div><div id="winter-olympics" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-winter-olympics">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 60fr) minmax(3em, 35fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 60fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 55fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-title="Medals by sport" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
@@ -1512,11 +1528,12 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Medals by year" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title">Medals by year</div></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Medal by year" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title">Medal by year</div></div>
 <div class="card-body html-fill-item html-fill-container">
 <div class="cell-output-display html-fill-item html-fill-container">
-<img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-dashboard-img-contain">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-55498034b5a5a55ddbb0" style="width:100%;height:325px;"></div>
+<script type="application/json" data-for="htmlwidget-55498034b5a5a55ddbb0">{"x":{"visdat":{"48941eef31d3":["function () ","plotlyVisDat"]},"cur_data":"48941eef31d3","attrs":{"48941eef31d3":{"x":{},"y":{},"mode":"lines+markers","marker":{"size":8,"symbol":"circle","color":"white"},"color":{},"colors":["#d4af37","#c0c0c0","#cd7f32"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":50,"l":50,"t":50,"r":50},"xaxis":{"domain":[0,1],"automargin":true,"title":"Year","tickvals":[1896,1904,1912,1920,1928,1936,1944,1952,1960,1968,1976,1984,1992,2000,2008,2016]},"yaxis":{"domain":[0,1],"automargin":true,"title":""},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[37,31,28,35,46,47,50,49,58,63,66,70,73,74,88,106,112,150,159,175,171,198],"mode":"lines+markers","marker":{"color":"white","size":8,"symbol":"circle","line":{"color":"rgba(205,127,50,1)"}},"type":"scatter","name":"Bronze","textfont":{"color":"rgba(205,127,50,1)"},"error_y":{"color":"rgba(205,127,50,1)"},"error_x":{"color":"rgba(205,127,50,1)"},"line":{"color":"rgba(205,127,50,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[38,28,32,37,48,44,49,48,67,70,63,71,73,74,88,108,109,145,157,175,175,197],"mode":"lines+markers","marker":{"color":"white","size":8,"symbol":"circle","line":{"color":"rgba(192,192,192,1)"}},"type":"scatter","name":"Silver","textfont":{"color":"rgba(192,192,192,1)"},"error_y":{"color":"rgba(192,192,192,1)"},"error_x":{"color":"rgba(192,192,192,1)"},"line":{"color":"rgba(192,192,192,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[55,30,32,36,41,45,51,50,61,66,70,70,72,74,87,104,110,145,162,176,174,202],"mode":"lines+markers","marker":{"color":"white","size":8,"symbol":"circle","line":{"color":"rgba(212,175,55,1)"}},"type":"scatter","name":"Gold","textfont":{"color":"rgba(212,175,55,1)"},"error_y":{"color":"rgba(212,175,55,1)"},"error_x":{"color":"rgba(212,175,55,1)"},"line":{"color":"rgba(212,175,55,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
@@ -1526,28 +1543,95 @@ grid-auto-rows: minmax(0, 1fr);">
     </span>
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Medals by country" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title">Medals by country</div></div>
+</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 25fr) minmax(3em, 75fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #d4af37;">
 <div class="card-body html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-award-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+<p>Most golds:</p>
+</p>
+<p class="value-box-value">
+305
+</p>
+Canada
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #bbbbbb;">
+<div class="card-body html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-award-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+<p>Most silvers:</p>
+</p>
+<p class="value-box-value">
+308
+</p>
+<p>United States</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #d59352;">
+<div class="card-body html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-award-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+<p>Most bronzes:</p>
+</p>
+<p class="value-box-value">
+215
+</p>
+Finland
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-12"><li class="nav-item" role="presentation"><a href="#card-tabset-12-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Top 30 total medals" aria-selected="true" class="nav-link active">Top 30 total medals</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-12-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Bottom 30 total medals" aria-selected="false" class="nav-link">Bottom 30 total medals</a></li></ul></div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-12"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-12-1"><div class="card-body html-fill-item html-fill-container" data-title="Top 30 total medals">
+<p>Team sorted in descending order of total medals</p>
 <div class="cell-output-display html-fill-item html-fill-container">
-<div id="fatnuhgnvt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
-<style>#fatnuhgnvt table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="eelsarxrvy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#eelsarxrvy table {
+  font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fatnuhgnvt thead, #fatnuhgnvt tbody, #fatnuhgnvt tfoot, #fatnuhgnvt tr, #fatnuhgnvt td, #fatnuhgnvt th {
+#eelsarxrvy thead, #eelsarxrvy tbody, #eelsarxrvy tfoot, #eelsarxrvy tr, #eelsarxrvy td, #eelsarxrvy th {
   border-style: none;
 }
 
-#fatnuhgnvt p {
+#eelsarxrvy p {
   margin: 0;
   padding: 0;
 }
 
-#fatnuhgnvt .gt_table {
+#eelsarxrvy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1555,17 +1639,17 @@ grid-auto-rows: minmax(0, 1fr);">
   margin-right: auto;
   color: #333333;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   background-color: #FFFFFF;
   width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
+  border-top-style: none;
+  border-top-width: 3px;
   border-top-color: #A8A8A8;
   border-right-style: none;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  border-bottom-style: solid;
+  border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #A8A8A8;
   border-left-style: none;
@@ -1573,12 +1657,12 @@ grid-auto-rows: minmax(0, 1fr);">
   border-left-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_caption {
+#eelsarxrvy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fatnuhgnvt .gt_title {
+#eelsarxrvy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1590,7 +1674,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-width: 0;
 }
 
-#fatnuhgnvt .gt_subtitle {
+#eelsarxrvy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1602,9 +1686,9 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-width: 0;
 }
 
-#fatnuhgnvt .gt_heading {
+#eelsarxrvy .gt_heading {
   background-color: #FFFFFF;
-  text-align: center;
+  text-align: left;
   border-bottom-color: #FFFFFF;
   border-left-style: none;
   border-left-width: 1px;
@@ -1614,19 +1698,19 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_bottom_border {
-  border-bottom-style: solid;
+#eelsarxrvy .gt_bottom_border {
+  border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_col_headings {
-  border-top-style: solid;
+#eelsarxrvy .gt_col_headings {
+  border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
+  border-bottom-color: #000000;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1635,7 +1719,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_col_heading {
+#eelsarxrvy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1655,7 +1739,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#fatnuhgnvt .gt_column_spanner_outer {
+#eelsarxrvy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1667,18 +1751,18 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 4px;
 }
 
-#fatnuhgnvt .gt_column_spanner_outer:first-child {
+#eelsarxrvy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fatnuhgnvt .gt_column_spanner_outer:last-child {
+#eelsarxrvy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fatnuhgnvt .gt_column_spanner {
+#eelsarxrvy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
+  border-bottom-color: #000000;
   vertical-align: bottom;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1687,11 +1771,11 @@ grid-auto-rows: minmax(0, 1fr);">
   width: 100%;
 }
 
-#fatnuhgnvt .gt_spanner_row {
+#eelsarxrvy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fatnuhgnvt .gt_group_heading {
+#eelsarxrvy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1701,12 +1785,12 @@ grid-auto-rows: minmax(0, 1fr);">
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
-  border-top-style: solid;
+  border-top-style: none;
   border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-top-color: #000000;
   border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1717,32 +1801,32 @@ grid-auto-rows: minmax(0, 1fr);">
   text-align: left;
 }
 
-#fatnuhgnvt .gt_empty_group_heading {
+#eelsarxrvy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
-  border-top-style: solid;
+  border-top-style: none;
   border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-top-color: #000000;
   border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
   vertical-align: middle;
 }
 
-#fatnuhgnvt .gt_from_md > :first-child {
+#eelsarxrvy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fatnuhgnvt .gt_from_md > :last-child {
+#eelsarxrvy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fatnuhgnvt .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
+#eelsarxrvy .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
@@ -1759,20 +1843,20 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#fatnuhgnvt .gt_stub {
+#eelsarxrvy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
   border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
+  border-right-width: 0px;
+  border-right-color: #FFFFFF;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-#fatnuhgnvt .gt_stub_row_group {
+#eelsarxrvy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1786,15 +1870,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: top;
 }
 
-#fatnuhgnvt .gt_row_group_first td {
+#eelsarxrvy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fatnuhgnvt .gt_row_group_first th {
+#eelsarxrvy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fatnuhgnvt .gt_summary_row {
+#eelsarxrvy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1804,16 +1888,16 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#fatnuhgnvt .gt_first_summary_row {
+#eelsarxrvy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_first_summary_row.thick {
+#eelsarxrvy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fatnuhgnvt .gt_last_summary_row {
+#eelsarxrvy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1823,7 +1907,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_grand_summary_row {
+#eelsarxrvy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1833,7 +1917,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#fatnuhgnvt .gt_first_grand_summary_row {
+#eelsarxrvy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1843,7 +1927,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_last_grand_summary_row_top {
+#eelsarxrvy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1853,11 +1937,11 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_striped {
+#eelsarxrvy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fatnuhgnvt .gt_table_body {
+#eelsarxrvy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1866,7 +1950,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_footnotes {
+#eelsarxrvy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1880,7 +1964,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_footnote {
+#eelsarxrvy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1889,7 +1973,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#fatnuhgnvt .gt_sourcenotes {
+#eelsarxrvy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1903,7 +1987,640 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#fatnuhgnvt .gt_sourcenote {
+#eelsarxrvy .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eelsarxrvy .gt_left {
+  text-align: left;
+}
+
+#eelsarxrvy .gt_center {
+  text-align: center;
+}
+
+#eelsarxrvy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#eelsarxrvy .gt_font_normal {
+  font-weight: normal;
+}
+
+#eelsarxrvy .gt_font_bold {
+  font-weight: bold;
+}
+
+#eelsarxrvy .gt_font_italic {
+  font-style: italic;
+}
+
+#eelsarxrvy .gt_super {
+  font-size: 65%;
+}
+
+#eelsarxrvy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#eelsarxrvy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#eelsarxrvy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#eelsarxrvy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#eelsarxrvy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#eelsarxrvy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#eelsarxrvy .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#eelsarxrvy .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#eelsarxrvy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+
+tbody tr:last-child {
+  border-bottom: 2px solid #ffffff00;
+}
+</style>
+
+<table class="gt_table caption-top table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">team</th>
+<th id="Gold" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Gold</th>
+<th id="Silver" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Silver</th>
+<th id="Bronze" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Bronze</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">United States</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #FAEDC1; color: #000000">166</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #F4D35E; color: #000000">308</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #F9E196; color: #000000">161</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Canada</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #F4D35E; color: #000000">305</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #FAE8AC; color: #000000">199</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #F8EEC9; color: #000000">107</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Norway</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #F8EEC9; color: #000000">151</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #FAEEC3; color: #000000">165</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #FAEBB7; color: #000000">127</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Soviet Union</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #F8DD86; color: #000000">250</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #A4A5A3; color: #000000">97</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #DAD4BC; color: #000000">93</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Sweden</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #D1CCB8; color: #000000">125</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #CECAB6; color: #000000">126</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #F8DD86; color: #000000">177</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Finland</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #7C8391; color: #FFFFFF">66</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EAE2C3; color: #000000">145</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #F4D35E; color: #000000">215</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Germany</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #FAF0CA; color: #000000">153</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #DDD6BD; color: #000000">136</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E3DBC0; color: #000000">97</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Austria</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #8F939A; color: #FFFFFF">79</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #A5A6A4; color: #000000">98</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EFE7C5; color: #000000">103</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Switzerland</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #8A8F98; color: #FFFFFF">76</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #7D8592; color: #FFFFFF">70</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #FAEAB5; color: #000000">129</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Russia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #A4A5A3; color: #000000">94</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #999B9E; color: #FFFFFF">89</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #B9B7AD; color: #000000">77</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Italy</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #6F798B; color: #FFFFFF">57</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #6B7589; color: #FFFFFF">57</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #B9B7AD; color: #000000">77</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">East Germany</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #707A8C; color: #FFFFFF">58</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #616D85; color: #FFFFFF">50</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #8A8F97; color: #FFFFFF">54</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Czechoslovakia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #133D67; color: #FFFFFF">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #8D9299; color: #FFFFFF">81</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #B5B3AB; color: #000000">75</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">France</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #50617D; color: #FFFFFF">36</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #4A5D7B; color: #FFFFFF">35</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #BDBBAF; color: #000000">79</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Netherlands</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #596881; color: #FFFFFF">42</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #4F607D; color: #FFFFFF">38</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #717B8C; color: #FFFFFF">42</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">South Korea</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #657187; color: #FFFFFF">50</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #3C5375; color: #FFFFFF">26</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #2B486E; color: #FFFFFF">10</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Great Britain</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #596881; color: #FFFFFF">42</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #20426B; color: #FFFFFF">10</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #5A6982; color: #FFFFFF">31</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">West Germany</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #2F4A70; color: #FFFFFF">15</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #364F72; color: #FFFFFF">22</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #77808F; color: #FFFFFF">45</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">China</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #314B70; color: #FFFFFF">16</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #435778; color: #FFFFFF">30</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #616D85; color: #FFFFFF">34</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Czech Republic</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #435778; color: #FFFFFF">27</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #24446C; color: #FFFFFF">12</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #616D85; color: #FFFFFF">34</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Japan</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #334D71; color: #FFFFFF">17</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #364F72; color: #FFFFFF">22</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #4C5E7B; color: #FFFFFF">24</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Unified Team</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #4F607D; color: #FFFFFF">35</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #20426B; color: #FFFFFF">10</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #354E72; color: #FFFFFF">14</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Poland</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #1E416A; color: #FFFFFF">6</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #20426B; color: #FFFFFF">10</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #2E4A6F; color: #FFFFFF">11</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Slovenia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #133D67; color: #FFFFFF">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #103C67; color: #FFFFFF">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #304B70; color: #FFFFFF">12</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Australia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #1E416A; color: #FFFFFF">6</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #0D3B66; color: #FFFFFF">3</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #23446C; color: #FFFFFF">7</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Belarus</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #1E416A; color: #FFFFFF">6</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #103C67; color: #FFFFFF">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #1D416A; color: #FFFFFF">5</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Latvia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #0D3B66; color: #FFFFFF">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #1B4069; color: #FFFFFF">8</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #23446C; color: #FFFFFF">7</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Belgium</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #133D67; color: #FFFFFF">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #103C67; color: #FFFFFF">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #23446C; color: #FFFFFF">7</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="team">Hungary</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #0D3B66; color: #FFFFFF">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #103C67; color: #FFFFFF">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #26456C; color: #FFFFFF">8</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="team">Croatia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #193F69; color: #FFFFFF">4</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #163E68; color: #FFFFFF">6</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #0D3B66; color: #FFFFFF">1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-12-2"><div class="card-body html-fill-item html-fill-container" data-title="Bottom 30 total medals">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="roelpzowup" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#roelpzowup table {
+  font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#roelpzowup thead, #roelpzowup tbody, #roelpzowup tfoot, #roelpzowup tr, #roelpzowup td, #roelpzowup th {
+  border-style: none;
+}
+
+#roelpzowup p {
+  margin: 0;
+  padding: 0;
+}
+
+#roelpzowup .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 3px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#roelpzowup .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#roelpzowup .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#roelpzowup .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#roelpzowup .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#roelpzowup .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#roelpzowup .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#roelpzowup .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#roelpzowup .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#roelpzowup .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#roelpzowup .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#roelpzowup .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#roelpzowup .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#roelpzowup .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#roelpzowup .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
+  vertical-align: middle;
+}
+
+#roelpzowup .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#roelpzowup .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#roelpzowup .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#roelpzowup .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#roelpzowup .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#roelpzowup .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#roelpzowup .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#roelpzowup .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#roelpzowup .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#roelpzowup .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#roelpzowup .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#roelpzowup .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#roelpzowup .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#roelpzowup .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#roelpzowup .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#roelpzowup .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#roelpzowup .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#roelpzowup .gt_footnote {
+  margin: 0px;
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1911,424 +2628,303 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#fatnuhgnvt .gt_left {
+#roelpzowup .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#roelpzowup .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#roelpzowup .gt_left {
   text-align: left;
 }
 
-#fatnuhgnvt .gt_center {
+#roelpzowup .gt_center {
   text-align: center;
 }
 
-#fatnuhgnvt .gt_right {
+#roelpzowup .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fatnuhgnvt .gt_font_normal {
+#roelpzowup .gt_font_normal {
   font-weight: normal;
 }
 
-#fatnuhgnvt .gt_font_bold {
+#roelpzowup .gt_font_bold {
   font-weight: bold;
 }
 
-#fatnuhgnvt .gt_font_italic {
+#roelpzowup .gt_font_italic {
   font-style: italic;
 }
 
-#fatnuhgnvt .gt_super {
+#roelpzowup .gt_super {
   font-size: 65%;
 }
 
-#fatnuhgnvt .gt_footnote_marks {
+#roelpzowup .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fatnuhgnvt .gt_asterisk {
+#roelpzowup .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fatnuhgnvt .gt_indent_1 {
+#roelpzowup .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fatnuhgnvt .gt_indent_2 {
+#roelpzowup .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fatnuhgnvt .gt_indent_3 {
+#roelpzowup .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fatnuhgnvt .gt_indent_4 {
+#roelpzowup .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fatnuhgnvt .gt_indent_5 {
+#roelpzowup .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fatnuhgnvt .katex-display {
+#roelpzowup .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fatnuhgnvt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#roelpzowup div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
+}
+
+tbody tr:last-child {
+  border-bottom: 2px solid #ffffff00;
 }
 </style>
 
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
-<th id="Team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
-<th id="Gold" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Gold</th>
-<th id="Silver" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Silver</th>
-<th id="Bronze" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Bronze</th>
-<th id="Total" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Total</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">team</th>
+<th id="Gold" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Gold</th>
+<th id="Silver" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Silver</th>
+<th id="Bronze" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Bronze</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">United States</td>
-<td class="gt_row gt_right" headers="Gold">166</td>
-<td class="gt_row gt_right" headers="Silver">308</td>
-<td class="gt_row gt_right" headers="Bronze">161</td>
-<td class="gt_row gt_right" headers="Total">635</td>
+<td class="gt_row gt_left" headers="team">Nepal</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EBF5F8; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EDF6F9; color: #000000">0</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Canada</td>
-<td class="gt_row gt_right" headers="Gold">305</td>
-<td class="gt_row gt_right" headers="Silver">199</td>
-<td class="gt_row gt_right" headers="Bronze">107</td>
-<td class="gt_row gt_right" headers="Total">611</td>
+<td class="gt_row gt_left" headers="team">New Zealand</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EAF4F7; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EDF6F9; color: #000000">0</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Norway</td>
-<td class="gt_row gt_right" headers="Gold">151</td>
-<td class="gt_row gt_right" headers="Silver">165</td>
-<td class="gt_row gt_right" headers="Bronze">127</td>
-<td class="gt_row gt_right" headers="Total">443</td>
+<td class="gt_row gt_left" headers="team">Uzbekistan</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EBF5F8; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EDF6F9; color: #000000">0</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Soviet Union</td>
-<td class="gt_row gt_right" headers="Gold">250</td>
-<td class="gt_row gt_right" headers="Silver">97</td>
-<td class="gt_row gt_right" headers="Bronze">93</td>
-<td class="gt_row gt_right" headers="Total">440</td>
+<td class="gt_row gt_left" headers="team">Luxembourg</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E6F3F5; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EDF6F9; color: #000000">0</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Sweden</td>
-<td class="gt_row gt_right" headers="Gold">125</td>
-<td class="gt_row gt_right" headers="Silver">126</td>
-<td class="gt_row gt_right" headers="Bronze">177</td>
-<td class="gt_row gt_right" headers="Total">428</td>
+<td class="gt_row gt_left" headers="team">North Korea</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EAF4F7; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EBF5F8; color: #000000">1</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Finland</td>
-<td class="gt_row gt_right" headers="Gold">66</td>
-<td class="gt_row gt_right" headers="Silver">145</td>
-<td class="gt_row gt_right" headers="Bronze">215</td>
-<td class="gt_row gt_right" headers="Total">426</td>
+<td class="gt_row gt_left" headers="team">Romania</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E8F4F6; color: #000000">2</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Germany</td>
-<td class="gt_row gt_right" headers="Gold">153</td>
-<td class="gt_row gt_right" headers="Silver">136</td>
-<td class="gt_row gt_right" headers="Bronze">97</td>
-<td class="gt_row gt_right" headers="Total">386</td>
+<td class="gt_row gt_left" headers="team">Spain</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EBF5F8; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EBF5F8; color: #000000">1</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Austria</td>
-<td class="gt_row gt_right" headers="Gold">79</td>
-<td class="gt_row gt_right" headers="Silver">98</td>
-<td class="gt_row gt_right" headers="Bronze">103</td>
-<td class="gt_row gt_right" headers="Total">280</td>
+<td class="gt_row gt_left" headers="team">Denmark</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #DCEEEF; color: #000000">5</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EDF6F9; color: #000000">0</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Switzerland</td>
-<td class="gt_row gt_right" headers="Gold">76</td>
-<td class="gt_row gt_right" headers="Silver">70</td>
-<td class="gt_row gt_right" headers="Bronze">129</td>
-<td class="gt_row gt_right" headers="Total">275</td>
+<td class="gt_row gt_left" headers="team">Slovakia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E8F4F6; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E6F3F5; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EBF5F8; color: #000000">1</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Russia</td>
-<td class="gt_row gt_right" headers="Gold">94</td>
-<td class="gt_row gt_right" headers="Silver">89</td>
-<td class="gt_row gt_right" headers="Bronze">77</td>
-<td class="gt_row gt_right" headers="Total">260</td>
+<td class="gt_row gt_left" headers="team">Bulgaria</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EBF5F8; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E6F3F5; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E6F3F5; color: #000000">3</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Italy</td>
-<td class="gt_row gt_right" headers="Gold">57</td>
-<td class="gt_row gt_right" headers="Silver">57</td>
-<td class="gt_row gt_right" headers="Bronze">77</td>
-<td class="gt_row gt_right" headers="Total">191</td>
+<td class="gt_row gt_left" headers="team">Estonia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E3F1F3; color: #000000">4</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E6F3F5; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EBF5F8; color: #000000">1</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">East Germany</td>
-<td class="gt_row gt_right" headers="Gold">58</td>
-<td class="gt_row gt_right" headers="Silver">50</td>
-<td class="gt_row gt_right" headers="Bronze">54</td>
-<td class="gt_row gt_right" headers="Total">162</td>
+<td class="gt_row gt_left" headers="team">India</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #DCEEEF; color: #000000">7</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EDF6F9; color: #000000">0</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Czechoslovakia</td>
-<td class="gt_row gt_right" headers="Gold">2</td>
-<td class="gt_row gt_right" headers="Silver">81</td>
-<td class="gt_row gt_right" headers="Bronze">75</td>
-<td class="gt_row gt_right" headers="Total">158</td>
+<td class="gt_row gt_left" headers="team">Kazakhstan</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EBF5F8; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E3F1F3; color: #000000">3</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E6F3F5; color: #000000">3</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">France</td>
-<td class="gt_row gt_right" headers="Gold">36</td>
-<td class="gt_row gt_right" headers="Silver">35</td>
-<td class="gt_row gt_right" headers="Bronze">79</td>
-<td class="gt_row gt_right" headers="Total">150</td>
+<td class="gt_row gt_left" headers="team">Yugoslavia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #D8ECED; color: #000000">6</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EBF5F8; color: #000000">1</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Netherlands</td>
-<td class="gt_row gt_right" headers="Gold">42</td>
-<td class="gt_row gt_right" headers="Silver">38</td>
-<td class="gt_row gt_right" headers="Bronze">42</td>
-<td class="gt_row gt_right" headers="Total">122</td>
+<td class="gt_row gt_left" headers="team">Liechtenstein</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E8F4F6; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E6F3F5; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E1F1F2; color: #000000">5</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">South Korea</td>
-<td class="gt_row gt_right" headers="Gold">50</td>
-<td class="gt_row gt_right" headers="Silver">26</td>
-<td class="gt_row gt_right" headers="Bronze">10</td>
-<td class="gt_row gt_right" headers="Total">86</td>
+<td class="gt_row gt_left" headers="team">Croatia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E3F1F3; color: #000000">4</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #D8ECED; color: #000000">6</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #EBF5F8; color: #000000">1</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Great Britain</td>
-<td class="gt_row gt_right" headers="Gold">42</td>
-<td class="gt_row gt_right" headers="Silver">10</td>
-<td class="gt_row gt_right" headers="Bronze">31</td>
-<td class="gt_row gt_right" headers="Total">83</td>
+<td class="gt_row gt_left" headers="team">Ukraine</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E1F0F2; color: #000000">5</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #EAF4F7; color: #000000">1</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E1F1F2; color: #000000">5</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">West Germany</td>
-<td class="gt_row gt_right" headers="Gold">15</td>
-<td class="gt_row gt_right" headers="Silver">22</td>
-<td class="gt_row gt_right" headers="Bronze">45</td>
-<td class="gt_row gt_right" headers="Total">82</td>
+<td class="gt_row gt_left" headers="team">Hungary</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #DFEFF1; color: #000000">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #DBEDEE; color: #000000">8</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">China</td>
-<td class="gt_row gt_right" headers="Gold">16</td>
-<td class="gt_row gt_right" headers="Silver">30</td>
-<td class="gt_row gt_right" headers="Bronze">34</td>
-<td class="gt_row gt_right" headers="Total">80</td>
+<td class="gt_row gt_left" headers="team">Belgium</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E8F4F6; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #DFEFF1; color: #000000">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #DDEEF0; color: #000000">7</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Czech Republic</td>
-<td class="gt_row gt_right" headers="Gold">27</td>
-<td class="gt_row gt_right" headers="Silver">12</td>
-<td class="gt_row gt_right" headers="Bronze">34</td>
-<td class="gt_row gt_right" headers="Total">73</td>
+<td class="gt_row gt_left" headers="team">Belarus</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #DEEFF0; color: #000000">6</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #DFEFF1; color: #000000">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #E1F1F2; color: #000000">5</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Japan</td>
-<td class="gt_row gt_right" headers="Gold">17</td>
-<td class="gt_row gt_right" headers="Silver">22</td>
-<td class="gt_row gt_right" headers="Bronze">24</td>
-<td class="gt_row gt_right" headers="Total">63</td>
+<td class="gt_row gt_left" headers="team">Latvia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #EDF6F9; color: #000000">0</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #D1E9E9; color: #000000">8</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #DDEEF0; color: #000000">7</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Unified Team</td>
-<td class="gt_row gt_right" headers="Gold">35</td>
-<td class="gt_row gt_right" headers="Silver">10</td>
-<td class="gt_row gt_right" headers="Bronze">14</td>
-<td class="gt_row gt_right" headers="Total">59</td>
+<td class="gt_row gt_left" headers="team">Australia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #DEEFF0; color: #000000">6</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #E3F1F3; color: #000000">3</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #DDEEF0; color: #000000">7</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Poland</td>
-<td class="gt_row gt_right" headers="Gold">6</td>
-<td class="gt_row gt_right" headers="Silver">10</td>
-<td class="gt_row gt_right" headers="Bronze">11</td>
-<td class="gt_row gt_right" headers="Total">27</td>
+<td class="gt_row gt_left" headers="team">Slovenia</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #E8F4F6; color: #000000">2</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #DFEFF1; color: #000000">4</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #D1E9E9; color: #000000">12</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Slovenia</td>
-<td class="gt_row gt_right" headers="Gold">2</td>
-<td class="gt_row gt_right" headers="Silver">4</td>
-<td class="gt_row gt_right" headers="Bronze">12</td>
-<td class="gt_row gt_right" headers="Total">18</td>
+<td class="gt_row gt_left" headers="team">Poland</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #DEEFF0; color: #000000">6</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #CAE6E5; color: #000000">10</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #D4EAEA; color: #000000">11</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Australia</td>
-<td class="gt_row gt_right" headers="Gold">6</td>
-<td class="gt_row gt_right" headers="Silver">3</td>
-<td class="gt_row gt_right" headers="Bronze">7</td>
-<td class="gt_row gt_right" headers="Total">16</td>
+<td class="gt_row gt_left" headers="team">Unified Team</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #95CDC8; color: #000000">35</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #CAE6E5; color: #000000">10</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #CDE7E6; color: #000000">14</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Belarus</td>
-<td class="gt_row gt_right" headers="Gold">6</td>
-<td class="gt_row gt_right" headers="Silver">4</td>
-<td class="gt_row gt_right" headers="Bronze">5</td>
-<td class="gt_row gt_right" headers="Total">15</td>
+<td class="gt_row gt_left" headers="team">Japan</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #C3E2E1; color: #000000">17</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #A0D2CD; color: #000000">22</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #B5DCD9; color: #000000">24</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Latvia</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">8</td>
-<td class="gt_row gt_right" headers="Bronze">7</td>
-<td class="gt_row gt_right" headers="Total">15</td>
+<td class="gt_row gt_left" headers="team">Czech Republic</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #AAD7D3; color: #000000">27</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #C3E2E1; color: #000000">12</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #9ED1CC; color: #000000">34</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Belgium</td>
-<td class="gt_row gt_right" headers="Gold">2</td>
-<td class="gt_row gt_right" headers="Silver">4</td>
-<td class="gt_row gt_right" headers="Bronze">7</td>
-<td class="gt_row gt_right" headers="Total">13</td>
+<td class="gt_row gt_left" headers="team">China</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #C5E3E2; color: #000000">16</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #83C5BE; color: #000000">30</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #9ED1CC; color: #000000">34</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Team">Hungary</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">4</td>
-<td class="gt_row gt_right" headers="Bronze">8</td>
-<td class="gt_row gt_right" headers="Total">12</td>
+<td class="gt_row gt_left" headers="team">West Germany</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #C8E5E4; color: #000000">15</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #A0D2CD; color: #000000">22</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #83C5BE; color: #000000">45</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Team">Croatia</td>
-<td class="gt_row gt_right" headers="Gold">4</td>
-<td class="gt_row gt_right" headers="Silver">6</td>
-<td class="gt_row gt_right" headers="Bronze">1</td>
-<td class="gt_row gt_right" headers="Total">11</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">Ukraine</td>
-<td class="gt_row gt_right" headers="Gold">5</td>
-<td class="gt_row gt_right" headers="Silver">1</td>
-<td class="gt_row gt_right" headers="Bronze">5</td>
-<td class="gt_row gt_right" headers="Total">11</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Liechtenstein</td>
-<td class="gt_row gt_right" headers="Gold">2</td>
-<td class="gt_row gt_right" headers="Silver">2</td>
-<td class="gt_row gt_right" headers="Bronze">5</td>
-<td class="gt_row gt_right" headers="Total">9</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">Estonia</td>
-<td class="gt_row gt_right" headers="Gold">4</td>
-<td class="gt_row gt_right" headers="Silver">2</td>
-<td class="gt_row gt_right" headers="Bronze">1</td>
-<td class="gt_row gt_right" headers="Total">7</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">India</td>
-<td class="gt_row gt_right" headers="Gold">7</td>
-<td class="gt_row gt_right" headers="Silver">0</td>
-<td class="gt_row gt_right" headers="Bronze">0</td>
-<td class="gt_row gt_right" headers="Total">7</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">Kazakhstan</td>
-<td class="gt_row gt_right" headers="Gold">1</td>
-<td class="gt_row gt_right" headers="Silver">3</td>
-<td class="gt_row gt_right" headers="Bronze">3</td>
-<td class="gt_row gt_right" headers="Total">7</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Yugoslavia</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">6</td>
-<td class="gt_row gt_right" headers="Bronze">1</td>
-<td class="gt_row gt_right" headers="Total">7</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">Bulgaria</td>
-<td class="gt_row gt_right" headers="Gold">1</td>
-<td class="gt_row gt_right" headers="Silver">2</td>
-<td class="gt_row gt_right" headers="Bronze">3</td>
-<td class="gt_row gt_right" headers="Total">6</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Denmark</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">5</td>
-<td class="gt_row gt_right" headers="Bronze">0</td>
-<td class="gt_row gt_right" headers="Total">5</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">Slovakia</td>
-<td class="gt_row gt_right" headers="Gold">2</td>
-<td class="gt_row gt_right" headers="Silver">2</td>
-<td class="gt_row gt_right" headers="Bronze">1</td>
-<td class="gt_row gt_right" headers="Total">5</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Luxembourg</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">2</td>
-<td class="gt_row gt_right" headers="Bronze">0</td>
-<td class="gt_row gt_right" headers="Total">2</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">North Korea</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">1</td>
-<td class="gt_row gt_right" headers="Bronze">1</td>
-<td class="gt_row gt_right" headers="Total">2</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Romania</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">0</td>
-<td class="gt_row gt_right" headers="Bronze">2</td>
-<td class="gt_row gt_right" headers="Total">2</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">Spain</td>
-<td class="gt_row gt_right" headers="Gold">1</td>
-<td class="gt_row gt_right" headers="Silver">0</td>
-<td class="gt_row gt_right" headers="Bronze">1</td>
-<td class="gt_row gt_right" headers="Total">2</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Nepal</td>
-<td class="gt_row gt_right" headers="Gold">1</td>
-<td class="gt_row gt_right" headers="Silver">0</td>
-<td class="gt_row gt_right" headers="Bronze">0</td>
-<td class="gt_row gt_right" headers="Total">1</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Team">New Zealand</td>
-<td class="gt_row gt_right" headers="Gold">0</td>
-<td class="gt_row gt_right" headers="Silver">1</td>
-<td class="gt_row gt_right" headers="Bronze">0</td>
-<td class="gt_row gt_right" headers="Total">1</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Team">Uzbekistan</td>
-<td class="gt_row gt_right" headers="Gold">1</td>
-<td class="gt_row gt_right" headers="Silver">0</td>
-<td class="gt_row gt_right" headers="Bronze">0</td>
-<td class="gt_row gt_right" headers="Total">1</td>
+<td class="gt_row gt_left" headers="team">Great Britain</td>
+<td class="gt_row gt_right" headers="Gold" style="background-color: #83C5BE; color: #000000">42</td>
+<td class="gt_row gt_right" headers="Silver" style="background-color: #CAE6E5; color: #000000">10</td>
+<td class="gt_row gt_right" headers="Bronze" style="background-color: #A5D4D0; color: #000000">31</td>
 </tr>
 </tbody>
 </table>
 
 </div>
 </div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
     </span>
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
-
-</div>
 </div>
 </div>
 </div>

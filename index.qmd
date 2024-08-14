@@ -43,9 +43,9 @@ summer_olympics <- olympics_full |>
   mutate(medal = fct_relevel(medal, "Bronze", "Silver", "Gold"))
 ```
 
-## Column {width=65%}
+## Column {width=60%}
 
-### Row {height=65%}
+### Row {height=55%}
 
 ```{r}
 #| title: Medals by sport
@@ -77,54 +77,73 @@ summer_olympics |>
   )
 ```
 
-### Row {height=35%}
-
-::: {.card title="Medals by year"}
-
-Due to WWII, no olympic games were held in 1940 and 1944
+### Row {height=40%}
 
 ```{r}
 #| fig-width: 13
 #| fig-height: 2
+#| fig-asp: 0.5
+#| title: Medal by year
 
-  summer_olympics |>
-  count(year, medal) |>
-  ggplot(aes(x = year, y = n, fill = medal)) +
-  geom_line(aes(color = medal), linewidth = 0.8) +
-  geom_point(size = 2, color = "white", shape = "circle filled") +
-  guides(
-    color = guide_legend(reverse = TRUE),
-    fill = guide_legend(reverse = TRUE)
-  ) +
-  scale_color_manual(values = c(
-    "Gold" = "#d4af37",
-    "Silver" = "#c0c0c0",
-    "Bronze" = "#cd7f32"
-    )
-  ) +
-  scale_fill_manual(values = c(
-    "Gold" = "#d4af37",
-    "Silver" = "#c0c0c0",
-    "Bronze" = "#cd7f32"
-    )
-  ) +  
-  scale_x_continuous(breaks = seq(1896, 2020, 8)) +
-  labs(
-    x = "Year",
-    y = NULL,
-    color = "Medal",
-    fill = "Medal"
-  ) +
-  theme_minimal() +
-  theme(
-    legend.position = "inside",
-    legend.position.inside = c(0.8, 0.2),
-    legend.direction = "horizontal",
-    legend.background = element_rect(fill = "white", color = "gray")
+  # summer_olympics |>
+  # count(year, medal) |>
+  # ggplot(aes(x = year, y = n, fill = medal)) +
+  # geom_line(aes(color = medal), linewidth = 0.8) +
+  # geom_point(size = 2, color = "white", shape = "circle filled") +
+  # guides(
+  #   color = guide_legend(reverse = TRUE),
+  #   fill = guide_legend(reverse = TRUE)
+  # ) +
+  # scale_color_manual(values = c(
+  #   "Gold" = "#d4af37",
+  #   "Silver" = "#c0c0c0",
+  #   "Bronze" = "#cd7f32"
+  #   )
+  # ) +
+  # scale_fill_manual(values = c(
+  #   "Gold" = "#d4af37",
+  #   "Silver" = "#c0c0c0",
+  #   "Bronze" = "#cd7f32"
+  #   )
+  # ) +  
+  # scale_x_continuous(breaks = seq(1896, 2020, 8)) +
+  # labs(
+  #   x = "Year",
+  #   y = NULL,
+  #   color = "Medal",
+  #   fill = "Medal"
+  # ) +
+  # ylim(0,800) +
+  # theme_minimal() +
+  # theme(
+  #   legend.position = "inside",
+  #   legend.position.inside = c(0.8, 0.2),
+  #   legend.direction = "horizontal",
+  #   legend.background = element_rect(fill = "white", color = "gray")
+  # )
+  # 
+
+# Preparar los datos
+data <- summer_olympics |>
+  count(year, medal)
+
+# Crear el gráfico con plotly
+fig <- plot_ly(data = data, x = ~year, y = ~n, color = ~medal, colors = c("Gold" = "#d4af37", "Silver" = "#c0c0c0", "Bronze" = "#cd7f32"),
+               type = 'scatter', mode = 'lines+markers', marker = list(size = 8, symbol = 'circle', color = "white"))
+
+# Ajustes adicionales
+fig <- fig %>% 
+  layout(
+    xaxis = list(title = "Year", tickvals = seq(1896, 2020, 8)),
+    yaxis = list(title = "" , range = c(0, 800)),
+    margin = list(l = 50, r = 50, b = 50, t = 50)
   )
 
+# Mostrar el gráfico
+fig
+  
+  
 ```
-::: 
 
 ## Column {width=35%}
 
@@ -244,7 +263,7 @@ summer_olympics |>
 
 ```{r}
 #| label: prep-winter-data
-olympics <- olympics_full |>
+winter_olympics <- olympics_full |>
   filter(
     season == "Winter",
     !is.na(medal)
@@ -254,14 +273,17 @@ olympics <- olympics_full |>
   mutate(medal = fct_relevel(medal, "Bronze", "Silver", "Gold"))
 ```
 
-## Column
+## Column {width=60%}
 
-### Row {height=60%}
+### Row {height=55%}
 
 ```{r}
 #| title: Medals by sport
-#| fig-width: 10
-olympics |>
+#| fig-width: 8
+#| fig-height: 3
+
+medallas = c("#cd7f32", "#c0c0c0", "#d4af37")
+winter_olympics |>
   mutate(
     sport = fct_lump_n(sport, n = 15),
     sport = fct_infreq(sport),
@@ -277,6 +299,7 @@ olympics |>
     fill = "Medal"
   ) +
   theme_minimal() +
+  scale_fill_manual(values = medallas) +
   theme(
     legend.position = c(0.9, 0.2),
     legend.direction = "horizontal",
@@ -287,42 +310,179 @@ olympics |>
 ### Row {height=40%}
 
 ```{r}
-#| title: Medals by year
-#| fig-asp: 0.3
-#| fig-width: 10
-olympics |>
-  count(year, medal) |>
-  ggplot(aes(x = year, y = n, color = medal)) +
-  geom_point(size = 0.5) +
-  geom_line() +
-  guides(color = guide_legend(reverse = TRUE)) +
-  scale_x_continuous(breaks = seq(1896, 2020, 8)) +
-  labs(
-    x = "Year",
-    y = NULL,
-    color = "Medal"
-  ) +
-  theme_minimal() +
-  theme(
-    legend.position = c(0.9, 0.2),
-    legend.direction = "horizontal",
-    legend.background = element_rect(fill = "white", color = "gray")
+#| fig-width: 13
+#| fig-height: 2
+#| fig-asp: 0.5
+#| title: Medal by year
+
+  # summer_olympics |>
+  # count(year, medal) |>
+  # ggplot(aes(x = year, y = n, fill = medal)) +
+  # geom_line(aes(color = medal), linewidth = 0.8) +
+  # geom_point(size = 2, color = "white", shape = "circle filled") +
+  # guides(
+  #   color = guide_legend(reverse = TRUE),
+  #   fill = guide_legend(reverse = TRUE)
+  # ) +
+  # scale_color_manual(values = c(
+  #   "Gold" = "#d4af37",
+  #   "Silver" = "#c0c0c0",
+  #   "Bronze" = "#cd7f32"
+  #   )
+  # ) +
+  # scale_fill_manual(values = c(
+  #   "Gold" = "#d4af37",
+  #   "Silver" = "#c0c0c0",
+  #   "Bronze" = "#cd7f32"
+  #   )
+  # ) +  
+  # scale_x_continuous(breaks = seq(1896, 2020, 8)) +
+  # labs(
+  #   x = "Year",
+  #   y = NULL,
+  #   color = "Medal",
+  #   fill = "Medal"
+  # ) +
+  # ylim(0,800) +
+  # theme_minimal() +
+  # theme(
+  #   legend.position = "inside",
+  #   legend.position.inside = c(0.8, 0.2),
+  #   legend.direction = "horizontal",
+  #   legend.background = element_rect(fill = "white", color = "gray")
+  # )
+  # 
+
+# Preparar los datos
+data <- winter_olympics |>
+  count(year, medal)
+
+# Crear el gráfico con plotly
+fig <- plot_ly(data = data, x = ~year, y = ~n, color = ~medal, colors = c("Gold" = "#d4af37", "Silver" = "#c0c0c0", "Bronze" = "#cd7f32"),
+               type = 'scatter', mode = 'lines+markers', marker = list(size = 8, symbol = 'circle', color = "white"))
+
+# Ajustes adicionales
+fig <- fig %>% 
+  layout(
+    xaxis = list(title = "Year", tickvals = seq(1896, 2020, 8)),
+    yaxis = list(title = ""),
+    margin = list(l = 50, r = 50, b = 50, t = 50)
   )
+
+# Mostrar el gráfico
+fig
+  
+  
 ```
 
-## Column
+## Column {width=35%}
+
+
+### Row {height="25%"}
+
 
 ```{r}
-#| title: Medals by country
+most_gold = winter_olympics %>% 
+  count(team, medal) %>% 
+  filter(medal== "Gold") %>%
+  arrange(desc(n),team) %>% 
+  slice_head(n=1)
 
-olympics |>
+most_silver = winter_olympics %>% 
+  count(team, medal) %>% 
+  filter(medal== "Silver") %>%
+  arrange(desc(n),team) %>% 
+  slice_head(n=1)
+  
+  
+most_bronze = winter_olympics %>% 
+  count(team, medal) %>% 
+  filter(medal== "Bronze") %>%
+  arrange(desc(n),team) %>% 
+  slice_head(n=1)
+  
+```
+
+
+:::{.valuebox icon="award-fill" color="#d4af37"}
+
+Most golds:
+
+`{r} most_gold$n`
+
+`{r} as.character(most_gold$team)`
+
+:::
+
+:::{.valuebox icon="award-fill" color="#bbbbbb"}
+
+Most silvers:
+
+`{r} most_silver$n`
+
+`{r} as.character(most_silver$team)`
+
+:::
+
+
+:::{.valuebox icon="award-fill" color="#d59352"}
+
+Most bronzes:
+
+`{r} most_bronze$n`
+
+`{r} as.character(most_bronze$team)`
+
+:::
+
+
+
+### Row {height="75%" .tabset}
+
+::: {.card title="Top 30 total medals"}
+
+Team sorted in descending order of total medals 
+```{r}
+#| title: Top 30 total medals
+winter_olympics|>
   count(team, medal) |>
   pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
   mutate(Total = Bronze + Gold + Silver) |>
   relocate(Team = team, Gold, Silver, Bronze, Total) |>
   arrange(desc(Total), Team) |>
-  gt()
+  slice_head(n = 30) %>% 
+  select(team =  Team, Gold, Silver,Bronze) %>% 
+  gt() %>% 
+  data_color(
+    method = "numeric",
+    palette = c("#0d3b66","#faf0ca","#f4d35e")
+  ) %>%
+  gt_theme_538()
+
 ```
 
+:::
 
+
+::: {.card title="Bottom 30 total medals"}
+```{r}
+#| title: hola
+winter_olympics|>
+  count(team, medal) |>
+  pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
+  mutate(Total = Bronze + Gold + Silver) |>
+  relocate(Team = team, Gold, Silver, Bronze, Total) |>
+  arrange(Total, Team) |>
+  slice_head(n = 30) %>% 
+  select(team =  Team, Gold, Silver,Bronze) %>% 
+  gt() %>%
+  data_color(
+    method = "numeric",
+    palette =  c("#edf6f9","#83c5be")
+  ) %>%
+  gt_theme_538()
+
+```
+
+:::
 
